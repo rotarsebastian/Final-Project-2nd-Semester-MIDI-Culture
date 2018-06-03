@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Midi Culture</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-
 <body>
-
-
+    <div class="fullscreen"></div>
     <main>
-
-        <div class="navbar-desktop">
-
+        <!-- Navigation for Desktop version -->
+        <div class="nav-desktop">
+            <img class="brand-logo" src="img/favicon.png"  alt="logo-desktop">
             <nav>
-
-                <div class="nav-wrapper">
-
-                    <img class="brand-logo" src="img/logo.png" alt="Prime" />
-
-                    <ul class="right">
-
-                    </ul>
-                </div>
+                <ul class="right">
+                </ul>
             </nav>
         </div>
-
+        <!-- Navigation for Mobile version -->
         <header class="appbar">
+            <img src="img/favicon.png" class="logoMobile" alt="logo-mobile">
             <svg class="menuIcon" viewBox="0 0 100 100">
-               
       <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5"/>
@@ -40,34 +30,36 @@
                 </ul>
             </nav>
         </header>
-
+        <!-- Burger Menu coming from the side -->
         <aside class="menu hidden">
             <ul>
-
             </ul>
         </aside>
-
-
-        <div class="container-fluid">
-            <section id="eventList">
-                <template id="evTemp">
-        <article class="event">
-       
-                <div class="date"> Date</div>
-                 <img src="" alt="" class="pic">
-                <div class="location"> Location</div>
-                <div class="category"> Category</div>
-           
-            
+        <!-- iFrames for Desktop version -->
+        <div class="iframes">
+            <div class="spotifyContainer">
+                <iframe class="spotify" src="https://open.spotify.com/embed/artist/5v6CgRyYharxumHzMpzctL"></iframe>
+            </div>
+            <div class="soundContainer">
+                <iframe class="soundCloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/257513382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div class="myVideoContainer"><video autoplay muted loop id="myVideo">
+                    <source src="backVideo.mp4" type="video/mp4">
+                </video></div>
+        <div class="containerHome">
+            <section id="homeList">
+                <template id="homeTemp">
+        <article class="home">
+                   <img src="img/favicon.png" onclick="linkPage(this)" id="picIcon" class="picIcons">
         </article>
             </template>
             </section>
-
         </div>
-
     </main>
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="home.js"></script>
     <script src="scriptJS.js"></script>
 </body>
-
 </html>

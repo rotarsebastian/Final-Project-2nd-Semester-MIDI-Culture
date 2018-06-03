@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Midi Culture</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-<body>
+<body id="backContact">
+    <div id="backContact"></div>
     <main>
         <!-- Navigation for Desktop version -->
         <div class="nav-desktop">
@@ -35,24 +37,20 @@
             </ul>
         </aside>
         <!-- Page Content -->
-        <div class="titleContainer">
-            <div class="title">see midi culture live at</div>
-        </div>
-        
-        <div class="container-fluid">
-            <section id="eventList">
-                <template id="evTemp">
-        <div class="event" id="" onclick="linkPage(this)">
-                <div class="date"></div>
-                <div class="picContainer"><img src="img/favicon.png" alt="picContainer" class="pic"></div>
-                <div class="location"></div>
-        </div>
-            </template>
-            </section>
+        <div class="container-contact">
+            <form id="contact-form">
+                <label for="inputName">name</label>
+                <input type="text" id="inputName" name="name" placeholder="your name">
+                <label for="inputEmail">email</label>
+                <input type="text" id="inputEmail" name="email" placeholder="your email address">
+                <label for="inputMessage">message</label>
+                <textarea id="inputMessage" name="message" placeholder="enter your message here" rows="5"></textarea>
+                <input type="submit" value="SEND" class="sendButton">
+            </form>
         </div>
     </main>
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="contact.js"></script>
     <script src="scriptJS.js"></script>
 </body>
 </html>

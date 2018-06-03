@@ -5,32 +5,23 @@
     <meta charset="UTF-8">
     <title>Midi Culture</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
-
-
     <main>
-
-        <div class="navbar-desktop">
-
+        <!-- Navigation for Desktop version -->
+        <div class="nav-desktop">
+            <img class="brand-logo" src="img/favicon.png" alt="logo-desktop">
             <nav>
-
-                <div class="nav-wrapper">
-
-                    <img class="brand-logo" src="img/logo.png" alt="Prime" />
-
-                    <ul class="right">
-
-                    </ul>
-                </div>
+                <ul class="right">
+                </ul>
             </nav>
         </div>
-
+        <!-- Navigation for Mobile version -->
         <header class="appbar">
+            <img src="img/favicon.png" class="logoMobile" alt="logo-mobile">
             <svg class="menuIcon" viewBox="0 0 100 100">
-               
       <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5"/>
       <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5"/>
@@ -40,34 +31,34 @@
                 </ul>
             </nav>
         </header>
-
+        <!-- Burger Menu coming from the side -->
         <aside class="menu hidden">
             <ul>
-
             </ul>
         </aside>
-
-
+        <!-- Page Content -->
+        <div class="titleContainer">
+            <div class="title">latest releases</div>
+        </div>
         <div class="container-fluid-song">
             <section id="musicList">
                 <template id="musicTemp">
         <article class="music">
-       
-                
-                <div class="songContainer"><img src="" alt="" class="songPic"></div>
+                <div class="container">
+                <div class="songContainer" onclick="linkPage(this)"><img src=""  id="" alt="" class="songPic"></div>
                 <div class="songArtist"></div>
+            <div class="overlay" onclick="linkPage(this)">
                 <div class="songName"></div>
+            </div>
+           </div>
                 <div class="songDuration"></div>
                 <div class="songLink"></div>
-           
-            
         </article>
             </template>
             </section>
-
         </div>
-
     </main>
+    <!-- Scripts -->
     <script src="musicJS.js"></script>
     <script src="scriptJS.js"></script>
 </body>
